@@ -12,6 +12,7 @@ def generate_random_pwg():
     random.shuffle(pwg)
     pwg_length = len(pwg)
     if pwg_length < 8:
+        print("Password:","".join(pwg))
         print("You have a weak password \n", "Recommendation is 8 characters")
         generate_random_pwg()
     else:
