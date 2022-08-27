@@ -10,7 +10,13 @@ def generate_random_pwg():
     for i in range(length):
         pwg.append(secrets.choice(characters))
     random.shuffle(pwg)
-    print("".join(pwg))
+    pwg_length = len(pwg)
+    if pwg_length < 8:
+        print("You have a weak password \n", "Recommendation is 8 characters")
+        generate_random_pwg()
+    else:
+        print("Password:","".join(pwg))
+
 generate_random_pwg()
 
 
